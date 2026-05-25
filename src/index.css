@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Allura&display=swap");
+@import "tailwindcss";
+
+.font-script {
+  font-family: "Allura", cursive;
+}
+
+.text-stroke-white {
+  -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.9);
+  color: transparent;
+}
+
+.text-stroke-dark {
+  -webkit-text-stroke: 1.5px rgba(15, 23, 42, 0.85);
+  color: transparent;
+}
+
+:root {
+  font-family: "Poppins", ui-sans-serif, system-ui, -apple-system, "Segoe UI",
+    Roboto, Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+html,
+body {
+  font-family: inherit;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+body {
+  top: 0 !important;
+}
+
+/* Google Translate Customization */
+.goog-te-banner-frame.skiptranslate {
+  display: none !important;
+}
+
+body {
+  top: 0 !important;
+}
+
+#google_translate_element {
+  display: inline-block !important;
+}
+
+.goog-te-gadget {
+  font-family: inherit !important;
+  font-size: 0 !important; /* Hides "Powered by Google" */
+  color: transparent !important;
+}
+
+.goog-te-gadget span {
+  display: none !important;
+}
+
+/* Dropdown Styling */
+.goog-te-combo {
+  margin: 0 !important;
+  padding: 4px 8px !important;
+  font-family: inherit !important;
+  font-size: 14px !important; /* Readable size */
+  color: #1f2937 !important; /* Dark text for readability */
+  background-color: #ffffff !important; /* White background */
+  border: 1px solid #d1d5db !important; /* Subtle border */
+  border-radius: 6px !important;
+  outline: none !important;
+  cursor: pointer !important;
+  height: auto !important;
+  width: auto !important; /* Fix vertical display issue */
+  min-width: 120px !important;
+  display: inline-block !important;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05) !important;
+  white-space: nowrap !important;
+}
+
+.goog-te-combo:hover {
+  border-color: #10b981 !important; /* Emerald-500 hover */
+}
+
+/* Dropdown Options */
+.goog-te-combo option {
+  color: #1f2937 !important;
+  background-color: #ffffff !important;
+  padding: 8px !important;
+}
+
+/* Fix for custom Google menus (if they appear) */
+.goog-te-menu-frame {
+  max-height: 400px !important;
+  overflow-y: auto !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06) !important;
+  border-radius: 0.5rem !important;
+}
+
+.goog-te-menu2 {
+  max-height: 400px !important;
+  overflow-y: auto !important;
+}
+
+/* Hide the Google logo/branding */
+.goog-logo-link {
+  display: none !important;
+}
+
+.goog-te-gadget .goog-te-combo {
+  margin: 0 !important;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* Horizontal marquee for the ProductMarquee strip */
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 35s linear infinite;
+  will-change: transform;
+}
+
+/* Vertical scroll for the About section card columns */
+@keyframes scroll-up {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+.animate-scroll-up-fast {
+  animation: scroll-up 22s linear infinite;
+  will-change: transform;
+}
+
+.animate-scroll-up-slow {
+  animation: scroll-up 32s linear infinite;
+  will-change: transform;
+}
