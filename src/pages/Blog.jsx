@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import PageHero from "../components/PageHero";
 import SEO from "../components/SEO";
@@ -29,7 +30,7 @@ const BlogPage = () => {
   }
 
   return (
-    <div className="w-full bg-linear-to-b from-[rgba(0,190,215,0.03)] via-white to-[rgba(198,216,105,0.04)]">
+    <div className="w-full bg-linear-to-b from-[rgba(245,185,33,0.03)] via-white to-[rgba(198,216,105,0.04)]">
       <SEO
         title="Blog"
         description="Read the latest insights and articles about sustainable eating, food export, and healthy living from oceanmarkexim."
@@ -64,17 +65,32 @@ const BlogPage = () => {
             </p>
           </div>
           <div className="inline-flex items-center gap-2 rounded-full bg-white/70 px-3 py-1 text-xs font-medium uppercase tracking-[0.18em] text-slate-500 ring-1 ring-slate-200/80 backdrop-blur">
-            <span className="h-1.5 w-1.5 rounded-full bg-[#00BED7]" />
+            <span className="h-1.5 w-1.5 rounded-full bg-[#F5B921]" />
             Oceanmark Exim Blog
           </div>
         </div>
 
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-80px" }}
+          variants={{
+            hidden: { opacity: 0 },
+            visible: { opacity: 1, transition: { staggerChildren: 0.1 } },
+          }}
+          className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3"
+        >
           {posts.map((post, index) => (
-            <Link
+            <motion.div
               key={post.id}
+              variants={{
+                hidden: { opacity: 0, y: 30 },
+                visible: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" } },
+              }}
+            >
+            <Link
               to={`/blogs/${post.slug}`}
-              className="group relative flex h-full flex-col overflow-hidden rounded-3xl border border-slate-200/70 bg-white/90 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+              className="group relative flex h-full flex-col overflow-hidden rounded-3xl border-2 border-[#C6D869]/40 bg-white/90 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-[#C6D869]/20 hover:border-[#C6D869]"
             >
               <div className="relative">
                 <div className="absolute inset-0 bg-linear-to-t from-black/55 via-black/15 to-transparent pointer-events-none" />
@@ -87,14 +103,14 @@ const BlogPage = () => {
                   className="h-56 w-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
                 <div className="absolute inset-x-0 bottom-0 px-4 pb-4">
-                  <span className="inline-flex items-center rounded-full bg-linear-to-r from-[#00BED7] to-[#C6D869] px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.16em] text-white shadow-sm">
+                  <span className="inline-flex items-center rounded-full bg-linear-to-r from-[#F5B921] to-[#C6D869] px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.16em] text-white shadow-sm">
                     {post.tag}
                   </span>
                 </div>
               </div>
 
               <div className="flex flex-1 flex-col p-6">
-                <h3 className="mb-3 line-clamp-2 text-lg md:text-xl font-bold leading-snug text-slate-900 transition-colors group-hover:text-[#00BED7]">
+                <h3 className="mb-3 line-clamp-2 text-lg md:text-xl font-bold leading-snug text-slate-900 transition-colors group-hover:text-[#5e7a17]">
                   {post.title}
                 </h3>
 
@@ -103,14 +119,15 @@ const BlogPage = () => {
                   dangerouslySetInnerHTML={{ __html: post.description }}
                 />
 
-                <div className="mt-auto flex items-center gap-2 text-sm font-semibold text-slate-900 transition-colors group-hover:text-[#00BED7]">
+                <div className="mt-auto flex items-center gap-2 text-sm font-semibold text-slate-900 transition-colors group-hover:text-[#5e7a17]">
                   {post.readMore}
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </div>
               </div>
             </Link>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </div>
   );

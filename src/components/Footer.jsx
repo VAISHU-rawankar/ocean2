@@ -14,10 +14,7 @@ import {
   ArrowUp,
 } from "lucide-react";
 import footerImg from "../assets/footer-bg.png";
-import FooterShape from "/ocean.jpeg";
-import Aeroplane from "../assets/footer-aeroplane.png";
-
-import Ship1 from "../assets/ship1.png";
+import FooterImage from "../assets/image.footer.jpg";
 import Logo from "/logo1.png";
 
 export default function OMKARAIMPEXFooter() {
@@ -390,54 +387,12 @@ export default function OMKARAIMPEXFooter() {
         </div>
 
         <div className="relative w-full overflow-hidden leading-none -mb-px">
-          <div className="absolute  left-0 w-full h-full z-20 pointer-events-none">
-            {/* Aeroplane Animation */}
-            <motion.div
-              className="absolute top-10 sm:top-20 w-16 sm:w-24 md:w-32 lg:w-40 z-30"
-              initial={{ x: "-20%" }}
-              animate={{ x: "120vw" }}
-              transition={{
-                x: {
-                  duration: 25,
-                  repeat: Infinity,
-                  ease: "linear",
-                },
-              }}
-            >
-              <img
-                src={Aeroplane}
-                alt="Aeroplane"
-                className="w-full h-auto rotate-0 -top-20 relative"
-              />
-            </motion.div>
-
-            <motion.div
-              className="absolute bottom-0 w-16 sm:w-20 md:w-28 lg:w-32"
-              initial={{ x: "100vw" }}
-              animate={{ x: "-100%" }}
-              transition={{
-                duration: 35,
-                repeat: Infinity,
-                ease: "linear",
-              }}
-            >
-              <img
-                src={Ship1}
-                alt="Ship"
-                className="w-56 h-auto scale-x-[-1]"
-              />
-            </motion.div>
-          </div>
-
-          {/* Shape Image */}
-          <div className="relative z-10 w-full">
-            <img
-              src={FooterShape}
-              alt=""
-              className="w-full h-auto block object-cover pt-16"
-              style={{ minHeight: "50px" }}
-            />
-          </div>
+          <img
+            src={FooterImage}
+            alt="Global logistics — ship, truck and air freight"
+            className="block w-full h-[180px] sm:h-[220px] md:h-[260px] lg:h-[300px] object-cover object-center"
+            style={{ imageRendering: "auto" }}
+          />
         </div>
 
         {/* Bottom Footer */}

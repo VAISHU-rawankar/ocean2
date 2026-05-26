@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
+import { motion } from "framer-motion";
 import PageHero from "../../components/PageHero";
 import SEO from "../../components/SEO";
 import ProductsImg from "../../assets/ProductHeader.jpeg";
@@ -10,6 +11,15 @@ import {
   useBannerData,
 } from "../../hooks/useApi";
 import LoadingSpinner from "../../components/LoadingSpinner";
+
+const gridContainer = {
+  hidden: { opacity: 0 },
+  visible: { opacity: 1, transition: { staggerChildren: 0.08, delayChildren: 0.1 } },
+};
+const gridItem = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" } },
+};
 
 function ProductTile({ to, name, image, priority = false }) {
   const resolvedImage =
@@ -42,7 +52,7 @@ function CategoryTile({ to, name, image, priority = false }) {
       resolvedImage={resolvedImage}
       priority={priority}
     >
-      <div className="mt-2 ml-2 inline-flex items-center text-sm font-semibold text-emerald-700">
+      <div className="mt-2 ml-2 inline-flex items-center text-sm font-semibold text-[#5e7a17]">
         View Categories
         <span className="ml-2 transition-transform group-hover:translate-x-1">
           →
@@ -97,19 +107,46 @@ export function ProductsIndex() {
         </div>
       </PageHero>
 
-      <div className="max-w-7xl mx-auto px-4 md:px-8 py-12 md:py-16">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
-          {categories.map((category, index) => (
-            <CategoryTile
-              key={category.slug}
-              to={`/products/${category.slug}`}
-              name={category.name}
-              description={category.description}
-              image={category.image}
-              priority={index < 4}
-            />
-          ))}
+      <div className="relative max-w-7xl mx-auto px-4 md:px-8 py-12 md:py-16">
+        <div className="absolute inset-0 -z-10 overflow-hidden pointer-events-none">
+          <div className="absolute -top-10 -left-10 w-80 h-80 bg-[#C6D869] rounded-full blur-3xl opacity-15" />
+          <div className="absolute -bottom-12 -right-12 w-96 h-96 bg-[#F5B921] rounded-full blur-3xl opacity-12" />
         </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-10 md:mb-14"
+        >
+          <span className="inline-flex items-center gap-2 rounded-full bg-[#C6D869]/25 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-[#5e7a17]">
+            <span className="h-1.5 w-1.5 rounded-full bg-[#7a9a1f]" />
+            Our Catalogue
+          </span>
+          <h2 className="mt-4 text-2xl md:text-3xl font-bold text-slate-900">Explore Product Categories</h2>
+          <div className="mt-3 h-1 w-24 mx-auto rounded-full bg-linear-to-r from-[#C6D869] to-[#F5B921]" />
+        </motion.div>
+
+        <motion.div
+          variants={gridContainer}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-80px" }}
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8"
+        >
+          {categories.map((category, index) => (
+            <motion.div key={category.slug} variants={gridItem} whileHover={{ y: -6 }}>
+              <CategoryTile
+                to={`/products/${category.slug}`}
+                name={category.name}
+                description={category.description}
+                image={category.image}
+                priority={index < 4}
+              />
+            </motion.div>
+          ))}
+        </motion.div>
       </div>
     </div>
   );
@@ -155,7 +192,7 @@ export function ProductsCategory() {
         <div className="max-w-7xl mx-auto px-4 md:px-8 py-12">
           <Link
             to="/products"
-            className="inline-flex items-center rounded-full bg-emerald-600 px-6 py-3 text-white font-semibold hover:bg-emerald-700 transition"
+            className="inline-flex items-center rounded-full bg-[#006837] px-6 py-3 text-white font-semibold hover:bg-[#005028] transition"
           >
             Back to Products
           </Link>
@@ -189,7 +226,14 @@ export function ProductsCategory() {
       ></PageHero>
 
       <div className="max-w-7xl mx-auto px-4 md:px-8 pt-10 md:pt-12">
-        <div className="rounded-3xl border border-slate-200 bg-white p-6 md:p-10 shadow-sm">
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          className="relative rounded-3xl border border-[#C6D869]/40 bg-white p-6 md:p-10 shadow-sm overflow-hidden"
+        >
+          <div className="absolute left-0 top-0 h-1.5 w-32 rounded-tl-3xl bg-linear-to-r from-[#C6D869] to-[#F5B921]" />
           <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-4">
             {introTitle}
           </h2>
@@ -197,30 +241,34 @@ export function ProductsCategory() {
             className="text-slate-600 leading-relaxed prose prose-emerald max-w-none"
             dangerouslySetInnerHTML={{ __html: descriptionHtml }}
           />
-        </div>
+        </motion.div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 md:px-8 py-12 md:py-16">
+      <div className="relative max-w-7xl mx-auto px-4 md:px-8 py-12 md:py-16">
+        <div className="absolute inset-0 -z-10 overflow-hidden pointer-events-none">
+          <div className="absolute top-10 right-10 w-80 h-80 bg-[#C6D869] rounded-full blur-3xl opacity-12" />
+          <div className="absolute bottom-10 left-10 w-80 h-80 bg-[#F5B921] rounded-full blur-3xl opacity-10" />
+        </div>
         {products.length > 0 ? (
-          <div
+          <motion.div
+            variants={gridContainer}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-80px" }}
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8"
             key={`grid-${categoryData.slug}`}
           >
             {products.map((item, index) => (
-              <ProductTile
-                key={item.id || item.slug}
-                // Determine link logic. If product details exist, link there.
-                // Assuming no deep product details page for now unless requested.
-                // Or maybe just link to same page or modal?
-                // Existing code linked to `/products/${category.slug}/${item.slug}`
-                // Let's keep that pattern if we want detailed product pages later
-                to={`/products/${categoryData.slug}/${item.slug}`} // Assuming product slug works
-                name={item.name}
-                image={item.image}
-                priority={index < 4}
-              />
+              <motion.div key={item.id || item.slug} variants={gridItem} whileHover={{ y: -6 }}>
+                <ProductTile
+                  to={`/products/${categoryData.slug}/${item.slug}`}
+                  name={item.name}
+                  image={item.image}
+                  priority={index < 4}
+                />
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         ) : (
           <div className="text-center py-12">
             <p className="text-slate-500 text-lg">

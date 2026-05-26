@@ -1,9 +1,15 @@
 import { useState, useMemo } from "react";
 import { Link, useParams } from "react-router-dom";
+import { motion } from "framer-motion";
 import PageHero from "../../components/PageHero";
 import SEO from "../../components/SEO";
 import { useProductDetails } from "../../hooks/useApi";
 import LoadingSpinner from "../../components/LoadingSpinner";
+
+const sectionFade = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+};
 
 export default function ProductsDetails() {
   const { category: categorySlug, id: itemSlug } = useParams();
@@ -76,7 +82,7 @@ export default function ProductsDetails() {
             <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
               <Link
                 to="/products"
-                className="inline-flex justify-center rounded-full bg-emerald-600 px-7 py-3 font-semibold text-white hover:bg-emerald-700 transition"
+                className="inline-flex justify-center rounded-full bg-[#006837] px-7 py-3 font-semibold text-white hover:bg-[#005028] transition"
               >
                 Back to Products
               </Link>
@@ -119,43 +125,58 @@ export default function ProductsDetails() {
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Product Description Section */}
-        <div className="bg-white rounded-2xl shadow-lg border border-slate-100 overflow-hidden mb-12">
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          className="relative bg-white rounded-2xl shadow-lg border-2 border-[#C6D869]/30 overflow-hidden mb-12"
+        >
+          <div className="absolute left-0 top-0 h-1.5 w-32 rounded-tl-2xl bg-linear-to-r from-[#C6D869] to-[#F5B921]" />
           <div className="p-8 md:p-10">
             <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-6 relative inline-block">
               About {product.title}
-              <span className="absolute bottom-0 left-0 w-1/2 h-1 bg-emerald-500 rounded-full"></span>
+              <span className="absolute bottom-0 left-0 w-1/2 h-1 rounded-full bg-linear-to-r from-[#C6D869] to-[#F5B921]"></span>
             </h2>
             <div
               className="prose prose-emerald max-w-none text-slate-600 leading-relaxed text-base"
               dangerouslySetInnerHTML={{ __html: product.description }}
             />
           </div>
-        </div>
+        </motion.div>
 
         {/* Navigation Buttons */}
-        <div className="mt-10 flex flex-wrap gap-3 justify-center">
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="mt-10 flex flex-wrap gap-3 justify-center"
+        >
           {sections.map((section) => (
-            <button
+            <motion.button
               key={section.id}
+              whileHover={{ y: -2 }}
+              whileTap={{ scale: 0.96 }}
               onClick={() =>
                 document
                   .getElementById(section.id)
                   ?.scrollIntoView({ behavior: "smooth", block: "start" })
               }
-              className="px-6 py-2 font-semibold text-sm transition-all duration-300 border-2 bg-white text-emerald-700 border-emerald-600 hover:bg-emerald-50"
+              className="px-6 py-2 font-semibold text-sm rounded-full transition-all duration-300 border-2 bg-white text-[#5e7a17] border-[#C6D869] hover:bg-[#C6D869]/15 hover:border-[#a4c34a]"
               type="button"
             >
               {section.label}
-            </button>
+            </motion.button>
           ))}
-        </div>
+        </motion.div>
 
         <div className="mt-10 space-y-16">
           {/* Market Demand */}
           {sections.some((s) => s.id === "demand") && (
             <section id="demand" className="scroll-mt-28">
               <div className="flex items-center gap-4 mb-8">
-                <div className="h-1 w-12 bg-gray-900 rounded"></div>
+                <div className="h-1.5 w-12 rounded bg-linear-to-r from-[#C6D869] to-[#F5B921]"></div>
                 <h2 className="text-2xl font-light tracking-wide text-gray-900 uppercase">
                   Global Market Demand
                 </h2>
@@ -177,7 +198,7 @@ export default function ProductsDetails() {
           {sections.some((s) => s.id === "specification") && (
             <section id="specification" className="scroll-mt-28">
               <div className="flex items-center gap-4 mb-8">
-                <div className="h-1 w-12 bg-gray-900 rounded"></div>
+                <div className="h-1.5 w-12 rounded bg-linear-to-r from-[#C6D869] to-[#F5B921]"></div>
                 <h2 className="text-2xl font-light tracking-wide text-gray-900 uppercase">
                   Specification
                 </h2>
@@ -208,7 +229,7 @@ export default function ProductsDetails() {
           {sections.some((s) => s.id === "ingredients") && (
             <section id="ingredients" className="scroll-mt-28">
               <div className="flex items-center gap-4 mb-8">
-                <div className="h-1 w-12 bg-gray-900 rounded"></div>
+                <div className="h-1.5 w-12 rounded bg-linear-to-r from-[#C6D869] to-[#F5B921]"></div>
                 <h2 className="text-2xl font-light tracking-wide text-gray-900 uppercase">
                   Nutrition Details
                 </h2>
@@ -258,7 +279,7 @@ export default function ProductsDetails() {
           {sections.some((s) => s.id === "uses") && (
             <section id="uses" className="scroll-mt-28">
               <div className="flex items-center gap-4 mb-8">
-                <div className="h-1 w-12 bg-gray-900 rounded"></div>
+                <div className="h-1.5 w-12 rounded bg-linear-to-r from-[#C6D869] to-[#F5B921]"></div>
                 <h2 className="text-2xl font-light tracking-wide text-gray-900 uppercase">
                   Uses &amp; Benefits
                 </h2>
@@ -304,7 +325,7 @@ export default function ProductsDetails() {
                   <>
                     <div className="flex flex-col gap-4 mb-8">
                       <div className="flex items-center gap-4">
-                        <div className="h-1 w-12 bg-gray-900 rounded"></div>
+                        <div className="h-1.5 w-12 rounded bg-linear-to-r from-[#C6D869] to-[#F5B921]"></div>
                         <h2 className="text-2xl font-light tracking-wide text-gray-900 uppercase">
                           {title}
                         </h2>
@@ -319,11 +340,11 @@ export default function ProductsDetails() {
                       {items.map((item, idx) => (
                         <div
                           key={idx}
-                          className="group bg-white rounded-xl border border-gray-100 p-6 hover:shadow-xl hover:border-emerald-100 transition-all duration-300"
+                          className="group bg-white rounded-xl border-2 border-[#C6D869]/30 p-6 hover:shadow-xl hover:shadow-[#C6D869]/20 hover:border-[#C6D869] transition-all duration-300"
                         >
                           <div className="flex items-start gap-4">
                             {item.image && (
-                              <div className="flex-shrink-0 w-20 h-20 bg-gray-50 rounded-lg p-2 group-hover:bg-emerald-50 transition-colors">
+                              <div className="flex-shrink-0 w-20 h-20 bg-gray-50 rounded-lg p-2 group-hover:bg-[#C6D869]/15 transition-colors">
                                 <img
                                   src={item.image}
                                   alt={item.title}
@@ -332,7 +353,7 @@ export default function ProductsDetails() {
                               </div>
                             )}
                             <div>
-                              <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-emerald-700 transition-colors">
+                              <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-[#5e7a17] transition-colors">
                                 {item.title}
                               </h3>
                               <p className="text-sm text-gray-600 leading-relaxed">

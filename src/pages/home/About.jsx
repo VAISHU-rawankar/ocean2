@@ -1,117 +1,20 @@
 import React from "react";
 import { motion } from "framer-motion";
-import {
-  Sprout,
-  Truck,
-  ShieldCheck,
-  Package,
-  FileText,
-  Layers,
-  Leaf,
-  Zap,
-  Headphones,
-  Send,
-  Snowflake,
-  BadgeCheck,
-  Globe2,
-  Boxes,
-  Award,
-  Handshake,
-} from "lucide-react";
+import { Sparkles } from "lucide-react";
 import HomeAbout from "../../assets/HomeAbout.jpg";
-import { useAboutCompanyData } from "../../hooks/useApi";
+import { useAboutCompanyData, useWhyChooseUsData } from "../../hooks/useApi";
 
 const _motion = motion;
 
-// Cards that scroll vertically in two columns on the right side.
-const FEATURE_CARDS = [
-  {
-    icon: Globe2,
-    title: "25+ Countries Served",
-    desc: "Delivering premium Indian produce to buyers across international markets.",
-  },
-  {
-    icon: Boxes,
-    title: "100+ Products",
-    desc: "Wide range across spices, grains, pulses, fruits, vegetables, and dry goods.",
-  },
-  {
-    icon: Award,
-    title: "100% Quality Assured",
-    desc: "End-to-end quality checks before every shipment leaves our facility.",
-  },
-  {
-    icon: Sprout,
-    title: "Trusted Sourcing",
-    desc: "Direct partnerships with farmers and processors across India.",
-  },
-  {
-    icon: Truck,
-    title: "Global Shipping",
-    desc: "Cold-chain logistics covering 25+ countries worldwide.",
-  },
-  {
-    icon: ShieldCheck,
-    title: "Quality Assurance",
-    desc: "Every shipment graded against international standards.",
-  },
-  {
-    icon: Package,
-    title: "Custom Packaging",
-    desc: "Tailored to buyer preferences and destination requirements.",
-  },
-  {
-    icon: FileText,
-    title: "Full Documentation",
-    desc: "Export paperwork, compliance, and certifications handled end-to-end.",
-  },
-  {
-    icon: Layers,
-    title: "Wide Portfolio",
-    desc: "Cumin, turmeric, chilli powder, Basmati rice, red onions, and many more.",
-  },
-  {
-    icon: Leaf,
-    title: "Farm-Fresh Produce",
-    desc: "Handpicked from trusted farms with traceable origins.",
-  },
-  {
-    icon: Zap,
-    title: "Fast Turnaround",
-    desc: "Quick order processing and on-time global deliveries.",
-  },
-  {
-    icon: Headphones,
-    title: "Dedicated Support",
-    desc: "Responsive buyer assistance through every stage of the trade.",
-  },
-  {
-    icon: Handshake,
-    title: "Indian Quality Worldwide",
-    desc: "Oceanmark Exim — delivering Indian quality to the world.",
-  },
-  {
-    icon: Send,
-    title: "Free Samples",
-    desc: "Pre-shipment samples available on request for verification.",
-  },
-  {
-    icon: Snowflake,
-    title: "Cold Chain",
-    desc: "Temperature-controlled storage and transit for perishables.",
-  },
-  {
-    icon: BadgeCheck,
-    title: "Certified Exporter",
-    desc: "Compliant with FSSAI, APEDA, and international food safety norms.",
-  },
-];
-
-function FeatureCard({ icon: Icon, title, desc }) {
+function FeatureCard({ image, title, desc }) {
   return (
     <div className="rounded-xl border-2 border-[#C6D869]/60 bg-white p-4 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#C6D869] hover:shadow-md hover:shadow-[#C6D869]/30">
-      <div className="mb-2 flex h-9 w-9 items-center justify-center rounded-lg bg-[#C6D869]/20 text-[#7a9a1f]">
-        <Icon size={18} />
+      <div className="mb-2 flex h-9 w-9 items-center justify-center rounded-lg bg-[#C6D869]/20 text-[#7a9a1f] overflow-hidden">
+        {image ? (
+          <img src={image} alt={title} className="h-6 w-6 object-contain" />
+        ) : (
+          <Sparkles size={18} />
+        )}
       </div>
       <h4 className="text-sm font-semibold text-slate-900">{title}</h4>
       <p className="mt-1 text-xs leading-relaxed text-slate-600">{desc}</p>
@@ -121,6 +24,7 @@ function FeatureCard({ icon: Icon, title, desc }) {
 
 export default function OMKARAIMPEXComponent() {
   const { data } = useAboutCompanyData();
+  const { data: whyChooseUs } = useWhyChooseUsData();
 
   const aboutData = data || {
     heading: "Oceanmark – Global Importers & Exporters of Food Products",
@@ -129,10 +33,16 @@ export default function OMKARAIMPEXComponent() {
     icon_url: null,
   };
 
+  const featureCards = (whyChooseUs?.cards || []).map((card) => ({
+    image: card.icon,
+    title: card.title,
+    desc: card.description,
+  }));
+
   // Split cards roughly in half for the two scrolling columns.
-  const mid = Math.ceil(FEATURE_CARDS.length / 2);
-  const colA = FEATURE_CARDS.slice(0, mid);
-  const colB = FEATURE_CARDS.slice(mid);
+  const mid = Math.ceil(featureCards.length / 2);
+  const colA = featureCards.slice(0, mid);
+  const colB = featureCards.slice(mid);
 
   // Animation variants for the left side (scroll-triggered).
   const leftVariants = {
