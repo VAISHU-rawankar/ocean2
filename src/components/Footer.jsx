@@ -14,7 +14,7 @@ import {
   ArrowUp,
 } from "lucide-react";
 import footerImg from "../assets/footer-bg.png";
-import Logo from "/logo1.png";
+import Logo from "/logo.svg";
 
 export default function OMKARAIMPEXFooter() {
   const _motion = motion;
@@ -164,7 +164,7 @@ export default function OMKARAIMPEXFooter() {
                 transition={{ duration: 0.6 }}
                 className="mb-6"
               >
-                <img src={Logo} alt="OMKARAIMPEX" className="" />
+                <img src={Logo} alt="Nexaports Global" className="h-16 w-auto" />
               </motion.div>
 
               <p className="text-slate-700 text-sm leading-relaxed mb-8">

@@ -12,7 +12,7 @@ import {
   Youtube,
   Globe,
 } from "lucide-react";
-import Logo from "/logo1.png";
+import Logo from "/logo.svg";
 import { SiGoogletranslate } from "react-icons/si";
 
 export default function Navbar() {
