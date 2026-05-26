@@ -103,7 +103,7 @@ export default function OMKARAIMPEXComponent() {
                 </p>
               </div>
               <div className="shrink-0 rounded-full bg-[#C6D869] px-3 py-1 text-[11px] font-semibold uppercase tracking-wide text-white">
-                Since 2025
+                Since 2026
               </div>
             </div>
           </div>

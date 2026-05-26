@@ -14,7 +14,6 @@ import {
   ArrowUp,
 } from "lucide-react";
 import footerImg from "../assets/footer-bg.png";
-import FooterImage from "../assets/image.footer.jpg";
 import Logo from "/logo1.png";
 
 export default function OMKARAIMPEXFooter() {
@@ -117,7 +116,7 @@ export default function OMKARAIMPEXFooter() {
   const onSubmitRequirement = (e) => {
     e.preventDefault();
     const email = requirementEmail.trim();
-    const to = "enquiry@oceanmarkexim.com";
+    const to = "enquiry@nexaportsglobal.com";
     const subject = "Enquiry";
     const body = email ? `Email: ${email}` : "";
     window.location.href = `mailto:${to}?subject=${encodeURIComponent(
@@ -377,22 +376,13 @@ export default function OMKARAIMPEXFooter() {
                       EMAIL:
                     </p>
                     <p className="text-slate-700 text-sm hover:text-emerald-700 cursor-pointer transition-colors">
-                      enquiry@oceanmarkexim.com
+                      enquiry@nexaportsglobal.com
                     </p>
                   </div>
                 </motion.div>
               </div>
             </motion.div>
           </motion.div>
-        </div>
-
-        <div className="relative w-full overflow-hidden leading-none -mb-px">
-          <img
-            src={FooterImage}
-            alt="Global logistics — ship, truck and air freight"
-            className="block w-full h-[180px] sm:h-[220px] md:h-[260px] lg:h-[300px] object-cover object-center"
-            style={{ imageRendering: "auto" }}
-          />
         </div>
 
         {/* Bottom Footer */}
@@ -404,7 +394,7 @@ export default function OMKARAIMPEXFooter() {
             className="flex flex-col md:flex-row items-center justify-between gap-6"
           >
             <p className="text-slate-700 text-sm text-center md:text-left">
-              © 2025{" "}
+              © 2026{" "}
               <span className="font-semibold text-slate-900">
                 Oceanmark Exim
               </span>

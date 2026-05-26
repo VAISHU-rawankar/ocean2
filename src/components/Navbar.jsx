@@ -153,14 +153,14 @@ export default function Navbar() {
                 </a>
 
                 <a
-                  href="mailto:enquiry@oceanmarkexim.com"
+                  href="mailto:enquiry@nexaportsglobal.com"
                   className="flex items-center gap-2 hover:text-gray-100 transition-all duration-300 group"
                 >
                   <div className="flex h-7 w-7 items-center justify-center rounded-full bg-white/20 group-hover:bg-white group-hover:text-[#F5B921] transition-all duration-300 shadow-sm">
                     <Mail size={14} />
                   </div>
                   <span className="text-xs sm:text-sm font-medium hidden sm:inline">
-                    enquiry@oceanmarkexim.com
+                    enquiry@nexaportsglobal.com
                   </span>
                   <span className="text-xs sm:text-sm font-medium sm:hidden">
                     Email Us
@@ -236,9 +236,9 @@ export default function Navbar() {
         {/* Main Navbar */}
         <div className="bg-white border-b border-slate-200 w-full">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div className="flex h-16 items-center justify-between">
+            <div className="flex h-20 items-center justify-between">
               <Link to="/" className="flex items-center gap-3">
-                <img src={Logo} alt="oceanmarkexim" className="h-10 w-auto" />
+                <img src={Logo} alt="Nexaports Global" className="h-14 w-auto" />
               </Link>
 
               <div className="hidden items-center gap-8 md:flex">

@@ -124,7 +124,7 @@ export default function ContactBranches() {
                 </div>
                 <div>
                   <a
-                    href="mailto:enquiry@oceanmarkexim.com"
+                    href="mailto:enquiry@nexaportsglobal.com"
                     className="text-gray-700 hover:text-[#006837] transition text-base font-medium"
                   >
                     {contact?.emails[0]}

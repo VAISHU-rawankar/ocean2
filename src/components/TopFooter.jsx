@@ -25,14 +25,14 @@ const TopFooter = () => {
             </a>
 
             <a
-              href="mailto:enquiry@oceanmarkexim.com"
+              href="mailto:enquiry@nexaportsglobal.com"
               className="flex items-center gap-2 hover:text-gray-100 transition-all duration-300 group"
             >
               <div className="flex h-9 w-9 items-center justify-center rounded-full bg-white/20 group-hover:bg-white group-hover:text-[#F5B921] transition-all duration-300 shadow-md">
                 <Mail size={16} />
               </div>
               <span className="text-sm font-medium hidden sm:inline">
-                enquiry@oceanmarkexim.com
+                enquiry@nexaportsglobal.com
               </span>
               <span className="text-sm font-medium sm:hidden">Email Us</span>
             </a>
