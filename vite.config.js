@@ -8,7 +8,7 @@ export default defineConfig({
   server: {
     proxy: {
       "/api": {
-        target: "https://admin.oceanmarkexim.com/api",
+        target: "https://admin.nexaportsglobal.com/api",
         changeOrigin: true,
         secure: true,
         rewrite: (path) => path.replace(/^\/api/, ""),

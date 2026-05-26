@@ -2,8 +2,8 @@
 const isDevelopment = import.meta.env.DEV;
 const API_BASE_URL = isDevelopment
   ? "/api"
-  : "https://admin.oceanmarkexim.com/api";
-export const IMAGE_BASE_URL = "https://admin.oceanmarkexim.com";
+  : "https://admin.nexaportsglobal.com/api";
+export const IMAGE_BASE_URL = "https://admin.nexaportsglobal.com";
 
 export const getHeroData = async () => {
   try {
