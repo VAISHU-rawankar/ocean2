@@ -9,14 +9,14 @@ export default function SEO({
   url,
   type = "website",
 }) {
-  const siteTitle = "Oceanmark Exim - Premium Indian Food Exporters";
+  const siteTitle = "Covenant Peniel Exim Pvt Ltd - Premium Indian Food Exporters";
   const defaultDescription =
-    "Oceanmark Exim is a leading exporter of premium quality Indian spices, grains, pulses, fruits, and vegetables. We ensure the best quality and timely delivery worldwide.";
+    "Covenant Peniel Exim Pvt Ltd is a leading exporter of premium quality Indian spices, grains, pulses, fruits, and vegetables. We ensure the best quality and timely delivery worldwide.";
   const defaultKeywords =
-    "Indian spices exporter, food exporter India, grains export, pulses export, fruits vegetables export, Oceanmark Exim";
+    "Indian spices exporter, food exporter India, grains export, pulses export, fruits vegetables export, Covenant Peniel Exim Pvt Ltd";
   const siteUrl = "https://impex.omkaragroupestates.com/"; // Replace with actual domain
 
-  const finalTitle = title ? `${title} | oceanmarkexim` : siteTitle;
+  const finalTitle = title ? `${title} | Covenant Peniel Exim` : siteTitle;
   const finalDescription = description || defaultDescription;
   const finalKeywords = keywords || defaultKeywords;
   const finalUrl = url ? `${siteUrl}${url}` : siteUrl;
@@ -35,7 +35,7 @@ export default function SEO({
       <meta property="og:description" content={finalDescription} />
       <meta property="og:url" content={finalUrl} />
       <meta property="og:image" content={finalImage} />
-      <meta property="og:site_name" content="OceanmarkExim" />
+      <meta property="og:site_name" content="Covenant Peniel Exim" />
 
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />

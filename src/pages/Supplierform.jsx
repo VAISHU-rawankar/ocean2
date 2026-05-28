@@ -119,17 +119,17 @@ export default function SupplierForm({ onClose }) {
         animate={{ opacity: 1, scale: 1, y: 0 }}
         exit={{ opacity: 0, scale: 0.92, y: 30 }}
         transition={{ duration: 0.35, ease: "easeOut" }}
-        className="relative bg-white rounded-2xl shadow-2xl w-full max-w-2xl max-h-screen overflow-y-auto border-2 border-[#C6D869]/40"
+        className="relative bg-white rounded-2xl shadow-2xl w-full max-w-2xl max-h-screen overflow-y-auto border-2 border-[#FF2801]/40"
       >
-        <div className="absolute left-0 top-0 right-0 h-1.5 rounded-t-2xl bg-linear-to-r from-[#C6D869] via-[#F5B921] to-[#006837]" />
+        <div className="absolute left-0 top-0 right-0 h-1.5 rounded-t-2xl bg-linear-to-r from-[#FF2801] via-[#434343] to-[#434343]" />
         {/* Header */}
-        <div className="sticky top-0 bg-white border-b border-[#C6D869]/30 p-6 flex justify-between items-center rounded-t-2xl">
+        <div className="sticky top-0 bg-white border-b border-[#FF2801]/30 p-6 flex justify-between items-center rounded-t-2xl">
           <h1 className="text-2xl md:text-3xl font-bold text-gray-800">
             BECOME A SUPPLIER WITH US
           </h1>
           <button
             onClick={handleCancel}
-            className="text-gray-500 hover:text-[#006837] transition"
+            className="text-gray-500 hover:text-[#434343] transition"
             aria-label="Close form"
           >
             <X size={28} />
@@ -138,7 +138,7 @@ export default function SupplierForm({ onClose }) {
 
         {/* Success / Error Message */}
         {submitted && (
-          <div className="mx-6 mt-6 p-4 bg-green-100 border border-green-400 text-green-700 rounded">
+          <div className="mx-6 mt-6 p-4 bg-red-100 border border-green-400 text-red-700 rounded">
             ✓ Form submitted successfully! Thank you for your interest.
           </div>
         )}
@@ -164,7 +164,7 @@ export default function SupplierForm({ onClose }) {
                 className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 transition ${
                   errors.fullName
                     ? "border-red-500 focus:ring-red-500"
-                    : "border-gray-300 focus:ring-[#C6D869]"
+                    : "border-gray-300 focus:ring-[#FF2801]"
                 }`}
                 placeholder="Enter your full name"
               />
@@ -185,7 +185,7 @@ export default function SupplierForm({ onClose }) {
                 className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 transition ${
                   errors.email
                     ? "border-red-500 focus:ring-red-500"
-                    : "border-gray-300 focus:ring-[#C6D869]"
+                    : "border-gray-300 focus:ring-[#FF2801]"
                 }`}
                 placeholder="Enter your email"
               />
@@ -205,7 +205,7 @@ export default function SupplierForm({ onClose }) {
                 name="countryCode"
                 value={formData.countryCode}
                 onChange={handleChange}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#C6D869] bg-[#C6D869]/10 transition"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF2801] bg-[#FF2801]/10 transition"
               >
                 <option>India (+91)</option>
                 <option>USA (+1)</option>
@@ -226,7 +226,7 @@ export default function SupplierForm({ onClose }) {
                 className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 transition ${
                   errors.mobileNumber
                     ? "border-red-500 focus:ring-red-500"
-                    : "border-gray-300 focus:ring-[#C6D869]"
+                    : "border-gray-300 focus:ring-[#FF2801]"
                 }`}
                 placeholder="Enter 10-digit number"
                 maxLength="10"
@@ -248,7 +248,7 @@ export default function SupplierForm({ onClose }) {
               name="category"
               value={formData.category}
               onChange={handleChange}
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#C6D869] bg-[#C6D869]/10 transition"
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF2801] bg-[#FF2801]/10 transition"
             >
               <option>Farmer</option>
               <option>Distributor</option>
@@ -272,7 +272,7 @@ export default function SupplierForm({ onClose }) {
                 className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 transition ${
                   errors.adharCard
                     ? "border-red-500 focus:ring-red-500"
-                    : "border-gray-300 focus:ring-[#C6D869]"
+                    : "border-gray-300 focus:ring-[#FF2801]"
                 }`}
                 placeholder="Enter 12-digit Aadhaar"
                 maxLength="12"
@@ -293,7 +293,7 @@ export default function SupplierForm({ onClose }) {
                 className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 transition resize-none ${
                   errors.productsAvailable
                     ? "border-red-500 focus:ring-red-500"
-                    : "border-gray-300 focus:ring-[#C6D869]"
+                    : "border-gray-300 focus:ring-[#FF2801]"
                 }`}
                 placeholder="List your available products"
                 rows="4"
@@ -311,14 +311,14 @@ export default function SupplierForm({ onClose }) {
             <button
               type="button"
               onClick={handleCancel}
-              className="flex-1 px-6 py-3 border-2 border-[#C6D869] text-[#5e7a17] hover:bg-[#C6D869]/15 font-bold text-lg rounded-lg transition duration-200 transform hover:scale-105 disabled:opacity-60"
+              className="flex-1 px-6 py-3 border-2 border-[#FF2801] text-[#434343] hover:bg-[#FF2801]/15 font-bold text-lg rounded-lg transition duration-200 transform hover:scale-105 disabled:opacity-60"
               disabled={loading}
             >
               CANCEL
             </button>
             <button
               type="submit"
-              className="flex-1 px-6 py-3 bg-linear-to-r from-[#C6D869] via-[#a4c34a] to-[#006837] hover:brightness-110 text-white font-bold text-lg rounded-lg transition duration-200 transform hover:scale-105 disabled:opacity-60 shadow-md"
+              className="flex-1 px-6 py-3 bg-linear-to-r from-[#FF2801] via-[#FF2801] to-[#434343] hover:brightness-110 text-white font-bold text-lg rounded-lg transition duration-200 transform hover:scale-105 disabled:opacity-60 shadow-md"
               disabled={loading}
             >
               {loading ? "SENDING..." : "SEND MESSAGE"}

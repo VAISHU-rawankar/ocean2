@@ -6,7 +6,7 @@ export function PageHero({
   breadcrumb,
   breadcrumbs,
   backgroundImage,
-  backgroundColor = "from-green-600 to-emerald-700",
+  backgroundColor = "from-red-600 to-emerald-700",
   overlayOpacity = 45,
   className = "",
   heroImage,

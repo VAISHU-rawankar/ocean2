@@ -30,16 +30,16 @@ const BlogPage = () => {
   }
 
   return (
-    <div className="w-full bg-linear-to-b from-[rgba(245,185,33,0.03)] via-white to-[rgba(198,216,105,0.04)]">
+    <div className="w-full bg-linear-to-b from-[rgba(67,67,67,0.03)] via-white to-[rgba(255,40,1,0.04)]">
       <SEO
         title="Blog"
-        description="Read the latest insights and articles about sustainable eating, food export, and healthy living from oceanmarkexim."
+        description="Read the latest insights and articles about sustainable eating, food export, and healthy living from Covenant Peniel Exim."
       />
       <PageHero
         title={bannerData?.title || "Blog"}
         breadcrumbs={[{ label: "Home", href: "/" }, { label: "Blog" }]}
         backgroundColor={
-          !bannerData?.image ? "from-green-600 to-emerald-700" : undefined
+          !bannerData?.image ? "from-red-600 to-emerald-700" : undefined
         }
         backgroundImage={bannerData?.image}
         overlayOpacity={45}
@@ -60,13 +60,13 @@ const BlogPage = () => {
               Latest insights
             </h2>
             <p className="mt-2 text-sm md:text-base text-slate-600 max-w-xl">
-              Stories and updates from Oceanmark Exim on global food trade,
+              Stories and updates from Covenant Peniel Exim on global food trade,
               sourcing, and quality.
             </p>
           </div>
           <div className="inline-flex items-center gap-2 rounded-full bg-white/70 px-3 py-1 text-xs font-medium uppercase tracking-[0.18em] text-slate-500 ring-1 ring-slate-200/80 backdrop-blur">
-            <span className="h-1.5 w-1.5 rounded-full bg-[#F5B921]" />
-            Oceanmark Exim Blog
+            <span className="h-1.5 w-1.5 rounded-full bg-[#434343]" />
+            Covenant Peniel Exim Blog
           </div>
         </div>
 
@@ -90,7 +90,7 @@ const BlogPage = () => {
             >
             <Link
               to={`/blogs/${post.slug}`}
-              className="group relative flex h-full flex-col overflow-hidden rounded-3xl border-2 border-[#C6D869]/40 bg-white/90 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-[#C6D869]/20 hover:border-[#C6D869]"
+              className="group relative flex h-full flex-col overflow-hidden rounded-3xl border-2 border-[#FF2801]/40 bg-white/90 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-[#FF2801]/20 hover:border-[#FF2801]"
             >
               <div className="relative">
                 <div className="absolute inset-0 bg-linear-to-t from-black/55 via-black/15 to-transparent pointer-events-none" />
@@ -103,14 +103,14 @@ const BlogPage = () => {
                   className="h-56 w-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
                 <div className="absolute inset-x-0 bottom-0 px-4 pb-4">
-                  <span className="inline-flex items-center rounded-full bg-linear-to-r from-[#F5B921] to-[#C6D869] px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.16em] text-white shadow-sm">
+                  <span className="inline-flex items-center rounded-full bg-linear-to-r from-[#434343] to-[#FF2801] px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.16em] text-white shadow-sm">
                     {post.tag}
                   </span>
                 </div>
               </div>
 
               <div className="flex flex-1 flex-col p-6">
-                <h3 className="mb-3 line-clamp-2 text-lg md:text-xl font-bold leading-snug text-slate-900 transition-colors group-hover:text-[#5e7a17]">
+                <h3 className="mb-3 line-clamp-2 text-lg md:text-xl font-bold leading-snug text-slate-900 transition-colors group-hover:text-[#434343]">
                   {post.title}
                 </h3>
 
@@ -119,7 +119,7 @@ const BlogPage = () => {
                   dangerouslySetInnerHTML={{ __html: post.description }}
                 />
 
-                <div className="mt-auto flex items-center gap-2 text-sm font-semibold text-slate-900 transition-colors group-hover:text-[#5e7a17]">
+                <div className="mt-auto flex items-center gap-2 text-sm font-semibold text-slate-900 transition-colors group-hover:text-[#434343]">
                   {post.readMore}
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </div>

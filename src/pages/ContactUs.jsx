@@ -83,7 +83,7 @@ export default function ContactBranches() {
     <div className="w-full bg-linear-to-b from-white via-green-50 to-white">
       <SEO
         title="Contact Us"
-        description="Get in touch with oceanmarkexim for your Indian food export requirements. We are here to serve you."
+        description="Get in touch with Covenant Peniel Exim for your Indian food export requirements. We are here to serve you."
       />
       <PageHero
         title={bannerData?.title || "Contact Us"}
@@ -101,14 +101,14 @@ export default function ContactBranches() {
           >
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-12 relative">
               {contact?.address_title}
-              <span className="absolute bottom-0 left-0 w-16 h-1 rounded bg-linear-to-r from-[#C6D869] to-[#F5B921]"></span>
+              <span className="absolute bottom-0 left-0 w-16 h-1 rounded bg-linear-to-r from-[#FF2801] to-[#434343]"></span>
             </h2>
 
             <div className="space-y-8">
               {/* Address */}
               <div className="flex gap-4">
                 <div className="shrink-0 mt-1">
-                  <MapPin className="w-6 h-6 text-[#006837]" strokeWidth={2} />
+                  <MapPin className="w-6 h-6 text-[#434343]" strokeWidth={2} />
                 </div>
                 <div>
                   <p className="text-gray-700 text-base leading-relaxed font-medium">
@@ -120,12 +120,12 @@ export default function ContactBranches() {
               {/* Email */}
               <div className="flex gap-4">
                 <div className="shrink-0 mt-1">
-                  <Mail className="w-6 h-6 text-[#006837]" strokeWidth={2} />
+                  <Mail className="w-6 h-6 text-[#434343]" strokeWidth={2} />
                 </div>
                 <div>
                   <a
-                    href="mailto:enquiry@nexaportsglobal.com"
-                    className="text-gray-700 hover:text-[#006837] transition text-base font-medium"
+                    href="mailto:sales@covenantpeniel.com"
+                    className="text-gray-700 hover:text-[#434343] transition text-base font-medium"
                   >
                     {contact?.emails[0]}
                   </a>
@@ -135,7 +135,7 @@ export default function ContactBranches() {
               {/* Phone */}
               <div className="flex gap-4">
                 <div className="shrink-0 mt-1">
-                  <Phone className="w-6 h-6 text-[#006837]" strokeWidth={2} />
+                  <Phone className="w-6 h-6 text-[#434343]" strokeWidth={2} />
                 </div>
                 <div>
                   <div className="space-y-1">
@@ -143,7 +143,7 @@ export default function ContactBranches() {
                       <a
                         key={index}
                         href={`tel:${phone}`}
-                        className="text-gray-700 hover:text-[#006837] transition text-base font-medium"
+                        className="text-gray-700 hover:text-[#434343] transition text-base font-medium"
                       >
                         {phone} <br />
                       </a>
@@ -153,16 +153,16 @@ export default function ContactBranches() {
               </div>
 
               {/* Map */}
-              <div className="w-full h-110 rounded-2xl overflow-hidden shadow-md border-2 border-[#C6D869]/40">
+              <div className="w-full h-110 rounded-2xl overflow-hidden shadow-md border-2 border-[#FF2801]/40">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6082.577792267853!2d73.74698934976806!3d20.002931038540208!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bddebc422ba8ce5%3A0xeac222c3f79c2550!2sOceanMark%20Exim!5e1!3m2!1sen!2sin!4v1768892635526!5m2!1sen!2sin"
+                  src="https://www.google.com/maps?q=Chinnaravuru,+Tenali,+Andhra+Pradesh+522201&output=embed"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
                   allowFullScreen=""
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  title="OceanMark Exim Location"
+                  title="Covenant Peniel Exim — Tenali Location"
                 ></iframe>
               </div>
             </div>
@@ -174,12 +174,12 @@ export default function ContactBranches() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-80px" }}
             transition={{ duration: 0.7, ease: "easeOut", delay: 0.1 }}
-            className="relative bg-white rounded-2xl p-8 md:p-10 shadow-lg border-2 border-[#C6D869]/40 overflow-hidden"
+            className="relative bg-white rounded-2xl p-8 md:p-10 shadow-lg border-2 border-[#FF2801]/40 overflow-hidden"
           >
-            <div className="absolute left-0 top-0 h-1.5 w-32 rounded-tl-2xl bg-linear-to-r from-[#C6D869] to-[#F5B921]" />
+            <div className="absolute left-0 top-0 h-1.5 w-32 rounded-tl-2xl bg-linear-to-r from-[#FF2801] to-[#434343]" />
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8 relative">
               CONNECT WITH US
-              <span className="absolute bottom-0 left-0 w-16 h-1 rounded bg-linear-to-r from-[#C6D869] to-[#F5B921]"></span>
+              <span className="absolute bottom-0 left-0 w-16 h-1 rounded bg-linear-to-r from-[#FF2801] to-[#434343]"></span>
             </h2>
 
             <form onSubmit={handleSubmit} className="space-y-6">
@@ -195,7 +195,7 @@ export default function ContactBranches() {
                     value={formData.fullName}
                     onChange={handleChange}
                     required
-                    className="px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#C6D869] focus:border-transparent transition"
+                    className="px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF2801] focus:border-transparent transition"
                     placeholder="Your name"
                   />
                 </div>
@@ -209,7 +209,7 @@ export default function ContactBranches() {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#C6D869] focus:border-transparent transition"
+                    className="px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF2801] focus:border-transparent transition"
                     placeholder="your@email.com"
                   />
                 </div>
@@ -225,7 +225,7 @@ export default function ContactBranches() {
                     name="countryCode"
                     value={formData.countryCode}
                     onChange={handleChange}
-                    className="px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#C6D869] focus:border-transparent transition bg-white cursor-pointer"
+                    className="px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF2801] focus:border-transparent transition bg-white cursor-pointer"
                   >
                     <option value="+91">India (+91)</option>
                     <option value="+1">USA (+1)</option>
@@ -244,7 +244,7 @@ export default function ContactBranches() {
                     value={formData.mobileNumber}
                     onChange={handleChange}
                     required
-                    className="px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#C6D869] focus:border-transparent transition"
+                    className="px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF2801] focus:border-transparent transition"
                     placeholder="9876543210"
                   />
                 </div>
@@ -261,7 +261,7 @@ export default function ContactBranches() {
                   value={formData.companyName}
                   onChange={handleChange}
                   required
-                  className="px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#C6D869] focus:border-transparent transition"
+                  className="px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF2801] focus:border-transparent transition"
                   placeholder="Your company"
                 />
               </div>
@@ -277,7 +277,7 @@ export default function ContactBranches() {
                   onChange={handleChange}
                   required
                   rows="5"
-                  className="px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#C6D869] focus:border-transparent transition resize-none"
+                  className="px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF2801] focus:border-transparent transition resize-none"
                   placeholder="Tell us how we can help..."
                 />
               </div>
@@ -286,7 +286,7 @@ export default function ContactBranches() {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className={`w-full bg-linear-to-r from-[#C6D869] via-[#a4c34a] to-[#006837] hover:brightness-110 text-white font-bold py-3 px-6 rounded-full transition transform hover:scale-105 active:scale-95 flex items-center justify-center gap-2 shadow-lg ${
+                className={`w-full bg-linear-to-r from-[#FF2801] via-[#FF2801] to-[#434343] hover:brightness-110 text-white font-bold py-3 px-6 rounded-full transition transform hover:scale-105 active:scale-95 flex items-center justify-center gap-2 shadow-lg ${
                   isSubmitting ? "opacity-70 cursor-not-allowed" : ""
                 }`}
               >
@@ -308,7 +308,7 @@ export default function ContactBranches() {
                 <div
                   className={`px-4 py-3 rounded-lg text-center font-semibold animate-pulse ${
                     submitMessage.type === "success"
-                      ? "bg-green-50 border border-green-300 text-green-800"
+                      ? "bg-red-50 border border-red-300 text-red-800"
                       : "bg-red-50 border border-red-300 text-red-800"
                   }`}
                 >
@@ -326,13 +326,13 @@ export default function ContactBranches() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.7, ease: "easeOut" }}
-          className="mt-20 pt-12 border-t border-[#C6D869]/30"
+          className="mt-20 pt-12 border-t border-[#FF2801]/30"
         >
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">
               {contact?.branch_heading}
             </h2>
-            <div className="w-24 h-1 rounded mx-auto bg-linear-to-r from-[#C6D869] to-[#F5B921]"></div>
+            <div className="w-24 h-1 rounded mx-auto bg-linear-to-r from-[#FF2801] to-[#434343]"></div>
           </div>
 
           {/* Branches Grid */}
@@ -354,17 +354,17 @@ export default function ContactBranches() {
                   visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
                 }}
                 whileHover={{ y: -6 }}
-                className="w-full md:max-w-md bg-white rounded-2xl p-8 border-2 border-[#C6D869]/40 hover:border-[#C6D869] shadow-md hover:shadow-2xl hover:shadow-[#C6D869]/20 transition duration-300 group"
+                className="w-full md:max-w-md bg-white rounded-2xl p-8 border-2 border-[#FF2801]/40 hover:border-[#FF2801] shadow-md hover:shadow-2xl hover:shadow-[#FF2801]/20 transition duration-300 group"
               >
                 <div className="flex items-start gap-4">
-                  <div className="p-3 bg-[#C6D869]/25 rounded-lg group-hover:bg-[#C6D869]/40 transition">
+                  <div className="p-3 bg-[#FF2801]/25 rounded-lg group-hover:bg-[#FF2801]/40 transition">
                     <MapPin
-                      className="w-6 h-6 text-[#5e7a17]"
+                      className="w-6 h-6 text-[#434343]"
                       strokeWidth={2}
                     />
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-[#5e7a17] transition">
+                    <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-[#434343] transition">
                       {branch.branch_location}
                     </h3>
                     <p className="text-gray-600 text-sm leading-relaxed">
@@ -378,8 +378,8 @@ export default function ContactBranches() {
         </motion.div>
       </div>
       {/* Decorative Background Elements */}
-      <div className="fixed top-0 right-0 -z-10 w-96 h-96 bg-[#C6D869] rounded-full blur-3xl opacity-15 pointer-events-none"></div>
-      <div className="fixed bottom-0 left-0 -z-10 w-96 h-96 bg-[#F5B921] rounded-full blur-3xl opacity-10 pointer-events-none"></div>
+      <div className="fixed top-0 right-0 -z-10 w-96 h-96 bg-[#FF2801] rounded-full blur-3xl opacity-15 pointer-events-none"></div>
+      <div className="fixed bottom-0 left-0 -z-10 w-96 h-96 bg-[#434343] rounded-full blur-3xl opacity-10 pointer-events-none"></div>
     </div>
   );
 }

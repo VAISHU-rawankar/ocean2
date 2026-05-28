@@ -24,7 +24,7 @@ export default function ProductCategoryCard({
             <div className="absolute inset-0 bg-linear-to-t from-black/15 via-black/0 to-transparent" />
           </div>
         </div>
-        <h3 className="mt-3 ml-2 text-base md:text-lg font-bold text-slate-900 group-hover:text-emerald-700 transition">
+        <h3 className="mt-3 ml-2 text-base md:text-lg font-bold text-slate-900 group-hover:text-red-700 transition">
           {name}
         </h3>
         {children}

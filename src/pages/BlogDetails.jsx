@@ -27,7 +27,7 @@ export default function BlogDetails() {
           <p className="text-gray-600">{error}</p>
           <Link
             to="/blogs"
-            className="text-[#5e7a17] hover:underline mt-4 block"
+            className="text-[#434343] hover:underline mt-4 block"
           >
             Back to Blogs
           </Link>
@@ -54,7 +54,7 @@ export default function BlogDetails() {
         <div className="max-w-4xl mx-auto px-4 md:px-8 py-12">
           <Link
             to="/blogs"
-            className="inline-flex items-center gap-2 rounded-full bg-[#006837] px-6 py-3 text-white font-semibold hover:bg-[#005028] transition duration-300"
+            className="inline-flex items-center gap-2 rounded-full bg-[#434343] px-6 py-3 text-white font-semibold hover:bg-[#2a2a2a] transition duration-300"
           >
             <ChevronRight size={18} />
             Back to Blog
@@ -122,7 +122,7 @@ export default function BlogDetails() {
                     className="pb-10 last:pb-0"
                   >
                     <div className="flex items-start gap-4 mb-8">
-                      <div className="shrink-0 w-1.5 h-10 rounded-full bg-linear-to-b from-[#C6D869] to-[#F5B921]" />
+                      <div className="shrink-0 w-1.5 h-10 rounded-full bg-linear-to-b from-[#FF2801] to-[#434343]" />
                       <h2 className="text-2xl md:text-3xl font-bold text-slate-900 leading-tight tracking-tight">
                         {section.title}
                       </h2>
@@ -132,7 +132,7 @@ export default function BlogDetails() {
                       <motion.div
                         whileHover={{ scale: 1.01 }}
                         transition={{ duration: 0.35 }}
-                        className="mb-8 rounded-2xl overflow-hidden border-2 border-[#C6D869]/30"
+                        className="mb-8 rounded-2xl overflow-hidden border-2 border-[#FF2801]/30"
                       >
                         <img
                           src={section.image}
@@ -162,7 +162,7 @@ export default function BlogDetails() {
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link
             to="/blogs"
-            className="inline-flex justify-center items-center gap-2 rounded-full bg-[#006837] px-8 py-4 font-semibold text-white hover:bg-[#005028] transition duration-300 shadow-md hover:shadow-lg"
+            className="inline-flex justify-center items-center gap-2 rounded-full bg-[#434343] px-8 py-4 font-semibold text-white hover:bg-[#2a2a2a] transition duration-300 shadow-md hover:shadow-lg"
           >
             <ChevronRight size={18} className="rotate-180" />
             Back to Blog

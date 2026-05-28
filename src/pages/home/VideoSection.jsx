@@ -36,7 +36,7 @@ export default function VideoSection() {
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
             {videoData.heading}
           </h2>
-          <div className="w-24 h-1 bg-emerald-500 mx-auto rounded-full" />
+          <div className="w-24 h-1 bg-red-500 mx-auto rounded-full" />
         </Motion.div>
 
         <div
@@ -82,7 +82,7 @@ export default function VideoSection() {
         >
           <Link
             to="/about-us"
-            className="inline-flex items-center justify-center px-8 py-3 text-base font-medium text-white bg-emerald-600 hover:bg-emerald-700 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+            className="inline-flex items-center justify-center px-8 py-3 text-base font-medium text-white bg-red-600 hover:bg-red-700 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
           >
             Read More
           </Link>

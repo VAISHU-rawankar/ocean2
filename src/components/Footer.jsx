@@ -14,7 +14,7 @@ import {
   ArrowUp,
 } from "lucide-react";
 import footerImg from "../assets/footer-bg.png";
-import Logo from "/logo.svg";
+import Logo from "/logo4.png";
 
 export default function OMKARAIMPEXFooter() {
   const _motion = motion;
@@ -116,7 +116,7 @@ export default function OMKARAIMPEXFooter() {
   const onSubmitRequirement = (e) => {
     e.preventDefault();
     const email = requirementEmail.trim();
-    const to = "enquiry@nexaportsglobal.com";
+    const to = "sales@covenantpeniel.com";
     const subject = "Enquiry";
     const body = email ? `Email: ${email}` : "";
     window.location.href = `mailto:${to}?subject=${encodeURIComponent(
@@ -142,7 +142,7 @@ export default function OMKARAIMPEXFooter() {
       </div>
 
       {/* <div className="absolute inset-0 -z-10 overflow-hidden pointer-events-none opacity-[0.08]">
-        <div className="absolute top-20 right-20 w-96 h-96 bg-emerald-600 rounded-full blur-3xl" />
+        <div className="absolute top-20 right-20 w-96 h-96 bg-red-600 rounded-full blur-3xl" />
         <div className="absolute bottom-20 left-20 w-96 h-96 bg-blue-600 rounded-full blur-3xl" />
       </div> */}
 
@@ -164,7 +164,15 @@ export default function OMKARAIMPEXFooter() {
                 transition={{ duration: 0.6 }}
                 className="mb-6"
               >
-                <img src={Logo} alt="Nexaports Global" className="h-16 w-auto" />
+                <img
+                  src={Logo}
+                  alt="Covenant Peniel Exim Pvt Ltd"
+                  className="h-72 md:h-80 w-auto object-contain"
+                  style={{ imageRendering: "auto" }}
+                />
+                <p className="mt-2 text-lg md:text-xl font-extrabold tracking-wide text-[#434343] uppercase leading-tight">
+                  Covenant Peniel Exim <span className="text-[#FF2801]">Pvt Ltd.</span>
+                </p>
               </motion.div>
 
               <p className="text-slate-700 text-sm leading-relaxed mb-8">
@@ -203,7 +211,7 @@ export default function OMKARAIMPEXFooter() {
                     rel="noopener noreferrer"
                     variants={socialVariants}
                     whileHover="hover"
-                    className="w-10 h-10 rounded-full bg-white ring-1 ring-black/10 flex items-center justify-center hover:bg-emerald-600 transition-colors duration-300"
+                    className="w-10 h-10 rounded-full bg-white ring-1 ring-black/10 flex items-center justify-center hover:bg-red-600 transition-colors duration-300"
                   >
                     <social.icon size={18} className="text-slate-700" />
                   </motion.a>
@@ -243,7 +251,7 @@ export default function OMKARAIMPEXFooter() {
                     initial={{ width: 0 }}
                     whileInView={{ width: "60px" }}
                     transition={{ duration: 0.6, delay: 0.2 }}
-                    className="absolute bottom-0 left-0 h-1 bg-emerald-500 rounded-full"
+                    className="absolute bottom-0 left-0 h-1 bg-red-500 rounded-full"
                   />
                 </h4>
               </div>
@@ -253,13 +261,13 @@ export default function OMKARAIMPEXFooter() {
                     key={index}
                     variants={linkVariants}
                     whileHover="hover"
-                    className="flex items-center gap-2 text-slate-700 hover:text-emerald-700 cursor-pointer transition-colors"
+                    className="flex items-center gap-2 text-slate-700 hover:text-red-700 cursor-pointer transition-colors"
                   >
                     <ChevronRight size={16} />
                     {item.label === "Become Supplier" ? (
                       <button
                         onClick={() => setIsSupplierFormOpen(true)}
-                        className="text-left hover:text-emerald-700 transition-colors"
+                        className="text-left hover:text-red-700 transition-colors"
                       >
                         {item.label}
                       </button>
@@ -282,7 +290,7 @@ export default function OMKARAIMPEXFooter() {
                     initial={{ width: 0 }}
                     whileInView={{ width: "60px" }}
                     transition={{ duration: 0.6, delay: 0.2 }}
-                    className="absolute bottom-0 left-0 h-1 bg-emerald-500 rounded-full"
+                    className="absolute bottom-0 left-0 h-1 bg-red-500 rounded-full"
                   />
                 </h4>
               </div>
@@ -292,7 +300,7 @@ export default function OMKARAIMPEXFooter() {
                     key={index}
                     variants={linkVariants}
                     whileHover="hover"
-                    className="flex items-center gap-2 text-slate-700 hover:text-emerald-700 cursor-pointer transition-colors"
+                    className="flex items-center gap-2 text-slate-700 hover:text-red-700 cursor-pointer transition-colors"
                   >
                     <ChevronRight size={16} />
                     <Link
@@ -316,7 +324,7 @@ export default function OMKARAIMPEXFooter() {
                     initial={{ width: 0 }}
                     whileInView={{ width: "60px" }}
                     transition={{ duration: 0.6, delay: 0.2 }}
-                    className="absolute bottom-0 left-0 h-1 bg-emerald-500 rounded-full"
+                    className="absolute bottom-0 left-0 h-1 bg-red-500 rounded-full"
                   />
                 </h4>
               </div>
@@ -331,16 +339,16 @@ export default function OMKARAIMPEXFooter() {
                 >
                   <MapPin
                     size={20}
-                    className="text-emerald-500 shrink-0 mt-1"
+                    className="text-red-500 shrink-0 mt-1"
                   />
                   <div>
                     <p className="font-semibold text-slate-900 text-sm mb-1">
                       REGISTERED ADDRESS:
                     </p>
                     <p className="text-slate-700 text-sm leading-relaxed">
-                      5th Floor, A502, The Hub, Parijat Nagar Chowk,
+                      #4-166, Donka Road,
                       <br />
-                      Mahatma Nagar Road, Nashik - 422005
+                      Chinnaravuru, TENALI, A.P. - 522201
                     </p>
                   </div>
                 </motion.div>
@@ -352,13 +360,19 @@ export default function OMKARAIMPEXFooter() {
                   transition={{ duration: 0.5, delay: 0.2 }}
                   className="flex gap-3"
                 >
-                  <Phone size={20} className="text-emerald-500 shrink-0 mt-1" />
+                  <Phone size={20} className="text-red-500 shrink-0 mt-1" />
                   <div>
                     <p className="font-semibold text-slate-900 text-sm mb-1">
                       PHONE NUMBER:
                     </p>
-                    <p className="text-slate-700 text-sm hover:text-emerald-700 cursor-pointer transition-colors">
-                      +91 9156935665
+                    <p className="text-slate-700 text-sm hover:text-red-700 cursor-pointer transition-colors">
+                      +91 8885 111 263
+                    </p>
+                    <p className="text-slate-700 text-sm hover:text-red-700 cursor-pointer transition-colors">
+                      +91 8121 414 235
+                    </p>
+                    <p className="text-slate-500 text-xs mt-1">
+                      GSTIN: 37AAJCC1186B1ZV
                     </p>
                   </div>
                 </motion.div>
@@ -370,13 +384,13 @@ export default function OMKARAIMPEXFooter() {
                   transition={{ duration: 0.5, delay: 0.3 }}
                   className="flex gap-3"
                 >
-                  <Mail size={20} className="text-emerald-500 shrink-0 mt-1" />
+                  <Mail size={20} className="text-red-500 shrink-0 mt-1" />
                   <div>
                     <p className="font-semibold text-slate-900 text-sm mb-1">
                       EMAIL:
                     </p>
-                    <p className="text-slate-700 text-sm hover:text-emerald-700 cursor-pointer transition-colors">
-                      enquiry@nexaportsglobal.com
+                    <p className="text-slate-700 text-sm hover:text-red-700 cursor-pointer transition-colors">
+                      sales@covenantpeniel.com
                     </p>
                   </div>
                 </motion.div>
@@ -396,12 +410,12 @@ export default function OMKARAIMPEXFooter() {
             <p className="text-slate-700 text-sm text-center md:text-left">
               © 2026{" "}
               <span className="font-semibold text-slate-900">
-                Oceanmark Exim
+                Covenant Peniel Exim Pvt Ltd
               </span>
               , Designed & Developed by{" "}
               <a
                 href="#"
-                className="text-emerald-500 hover:text-emerald-400 font-semibold transition-colors"
+                className="text-red-500 hover:text-red-400 font-semibold transition-colors"
               >
                 AnantKamal Software Labs
               </a>
@@ -425,7 +439,7 @@ export default function OMKARAIMPEXFooter() {
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.5 }}
             onClick={scrollToTop}
-            className="fixed bottom-8 right-15 z-50 p-3 rounded-full bg-[#006837] text-white shadow-lg hover:bg-emerald-700 transition-colors focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2"
+            className="fixed bottom-8 right-15 z-50 p-3 rounded-full bg-[#434343] text-white shadow-lg hover:bg-red-700 transition-colors focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
           >

@@ -82,7 +82,7 @@ export default function ProductsDetails() {
             <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
               <Link
                 to="/products"
-                className="inline-flex justify-center rounded-full bg-[#006837] px-7 py-3 font-semibold text-white hover:bg-[#005028] transition"
+                className="inline-flex justify-center rounded-full bg-[#434343] px-7 py-3 font-semibold text-white hover:bg-[#2a2a2a] transition"
               >
                 Back to Products
               </Link>
@@ -130,16 +130,16 @@ export default function ProductsDetails() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          className="relative bg-white rounded-2xl shadow-lg border-2 border-[#C6D869]/30 overflow-hidden mb-12"
+          className="relative bg-white rounded-2xl shadow-lg border-2 border-[#FF2801]/30 overflow-hidden mb-12"
         >
-          <div className="absolute left-0 top-0 h-1.5 w-32 rounded-tl-2xl bg-linear-to-r from-[#C6D869] to-[#F5B921]" />
+          <div className="absolute left-0 top-0 h-1.5 w-32 rounded-tl-2xl bg-linear-to-r from-[#FF2801] to-[#434343]" />
           <div className="p-8 md:p-10">
             <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-6 relative inline-block">
               About {product.title}
-              <span className="absolute bottom-0 left-0 w-1/2 h-1 rounded-full bg-linear-to-r from-[#C6D869] to-[#F5B921]"></span>
+              <span className="absolute bottom-0 left-0 w-1/2 h-1 rounded-full bg-linear-to-r from-[#FF2801] to-[#434343]"></span>
             </h2>
             <div
-              className="prose prose-emerald max-w-none text-slate-600 leading-relaxed text-base"
+              className="prose prose-red max-w-none text-slate-600 leading-relaxed text-base"
               dangerouslySetInnerHTML={{ __html: product.description }}
             />
           </div>
@@ -163,7 +163,7 @@ export default function ProductsDetails() {
                   .getElementById(section.id)
                   ?.scrollIntoView({ behavior: "smooth", block: "start" })
               }
-              className="px-6 py-2 font-semibold text-sm rounded-full transition-all duration-300 border-2 bg-white text-[#5e7a17] border-[#C6D869] hover:bg-[#C6D869]/15 hover:border-[#a4c34a]"
+              className="px-6 py-2 font-semibold text-sm rounded-full transition-all duration-300 border-2 bg-white text-[#434343] border-[#FF2801] hover:bg-[#FF2801]/15 hover:border-[#FF2801]"
               type="button"
             >
               {section.label}
@@ -176,7 +176,7 @@ export default function ProductsDetails() {
           {sections.some((s) => s.id === "demand") && (
             <section id="demand" className="scroll-mt-28">
               <div className="flex items-center gap-4 mb-8">
-                <div className="h-1.5 w-12 rounded bg-linear-to-r from-[#C6D869] to-[#F5B921]"></div>
+                <div className="h-1.5 w-12 rounded bg-linear-to-r from-[#FF2801] to-[#434343]"></div>
                 <h2 className="text-2xl font-light tracking-wide text-gray-900 uppercase">
                   Global Market Demand
                 </h2>
@@ -198,7 +198,7 @@ export default function ProductsDetails() {
           {sections.some((s) => s.id === "specification") && (
             <section id="specification" className="scroll-mt-28">
               <div className="flex items-center gap-4 mb-8">
-                <div className="h-1.5 w-12 rounded bg-linear-to-r from-[#C6D869] to-[#F5B921]"></div>
+                <div className="h-1.5 w-12 rounded bg-linear-to-r from-[#FF2801] to-[#434343]"></div>
                 <h2 className="text-2xl font-light tracking-wide text-gray-900 uppercase">
                   Specification
                 </h2>
@@ -229,7 +229,7 @@ export default function ProductsDetails() {
           {sections.some((s) => s.id === "ingredients") && (
             <section id="ingredients" className="scroll-mt-28">
               <div className="flex items-center gap-4 mb-8">
-                <div className="h-1.5 w-12 rounded bg-linear-to-r from-[#C6D869] to-[#F5B921]"></div>
+                <div className="h-1.5 w-12 rounded bg-linear-to-r from-[#FF2801] to-[#434343]"></div>
                 <h2 className="text-2xl font-light tracking-wide text-gray-900 uppercase">
                   Nutrition Details
                 </h2>
@@ -279,7 +279,7 @@ export default function ProductsDetails() {
           {sections.some((s) => s.id === "uses") && (
             <section id="uses" className="scroll-mt-28">
               <div className="flex items-center gap-4 mb-8">
-                <div className="h-1.5 w-12 rounded bg-linear-to-r from-[#C6D869] to-[#F5B921]"></div>
+                <div className="h-1.5 w-12 rounded bg-linear-to-r from-[#FF2801] to-[#434343]"></div>
                 <h2 className="text-2xl font-light tracking-wide text-gray-900 uppercase">
                   Uses &amp; Benefits
                 </h2>
@@ -325,7 +325,7 @@ export default function ProductsDetails() {
                   <>
                     <div className="flex flex-col gap-4 mb-8">
                       <div className="flex items-center gap-4">
-                        <div className="h-1.5 w-12 rounded bg-linear-to-r from-[#C6D869] to-[#F5B921]"></div>
+                        <div className="h-1.5 w-12 rounded bg-linear-to-r from-[#FF2801] to-[#434343]"></div>
                         <h2 className="text-2xl font-light tracking-wide text-gray-900 uppercase">
                           {title}
                         </h2>
@@ -340,11 +340,11 @@ export default function ProductsDetails() {
                       {items.map((item, idx) => (
                         <div
                           key={idx}
-                          className="group bg-white rounded-xl border-2 border-[#C6D869]/30 p-6 hover:shadow-xl hover:shadow-[#C6D869]/20 hover:border-[#C6D869] transition-all duration-300"
+                          className="group bg-white rounded-xl border-2 border-[#FF2801]/30 p-6 hover:shadow-xl hover:shadow-[#FF2801]/20 hover:border-[#FF2801] transition-all duration-300"
                         >
                           <div className="flex items-start gap-4">
                             {item.image && (
-                              <div className="flex-shrink-0 w-20 h-20 bg-gray-50 rounded-lg p-2 group-hover:bg-[#C6D869]/15 transition-colors">
+                              <div className="flex-shrink-0 w-20 h-20 bg-gray-50 rounded-lg p-2 group-hover:bg-[#FF2801]/15 transition-colors">
                                 <img
                                   src={item.image}
                                   alt={item.title}
@@ -353,7 +353,7 @@ export default function ProductsDetails() {
                               </div>
                             )}
                             <div>
-                              <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-[#5e7a17] transition-colors">
+                              <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-[#434343] transition-colors">
                                 {item.title}
                               </h3>
                               <p className="text-sm text-gray-600 leading-relaxed">

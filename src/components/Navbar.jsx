@@ -12,7 +12,7 @@ import {
   Youtube,
   Globe,
 } from "lucide-react";
-import Logo from "/logo.svg";
+import Logo from "/logo4.png";
 import { SiGoogletranslate } from "react-icons/si";
 
 export default function Navbar() {
@@ -132,7 +132,7 @@ export default function Navbar() {
       <header className="fixed z-50 left-0 right-0 top-0 transition-all duration-500 ease-in-out font-sans">
         {/* Top Bar */}
         <div
-          className={`w-full bg-linear-to-r from-[#AFCA21] via-[#7ec31f] to-[#F5B921] text-white overflow-hidden transition-all duration-500 ease-in-out ${
+          className={`w-full bg-linear-to-r from-[#FF2801] via-[#e62500] to-[#434343] text-white overflow-hidden transition-all duration-500 ease-in-out ${
             isVisible ? "max-h-48 opacity-100" : "max-h-0 opacity-0"
           }`}
         >
@@ -141,26 +141,26 @@ export default function Navbar() {
               {/* Contact Information - Left Side */}
               <div className="flex flex-row items-center gap-4 sm:gap-6">
                 <a
-                  href="tel:+919156935665"
+                  href="tel:+918885111263"
                   className="flex items-center gap-2 hover:text-gray-100 transition-all duration-300 group"
                 >
-                  <div className="flex h-7 w-7 items-center justify-center rounded-full bg-white/20 group-hover:bg-white group-hover:text-[#F5B921] transition-all duration-300 shadow-sm">
+                  <div className="flex h-7 w-7 items-center justify-center rounded-full bg-white/20 group-hover:bg-white group-hover:text-[#434343] transition-all duration-300 shadow-sm">
                     <Phone size={14} />
                   </div>
                   <span className="text-xs sm:text-sm font-medium">
-                    +91 9156935665
+                    +91 8885 111 263
                   </span>
                 </a>
 
                 <a
-                  href="mailto:enquiry@nexaportsglobal.com"
+                  href="mailto:sales@covenantpeniel.com"
                   className="flex items-center gap-2 hover:text-gray-100 transition-all duration-300 group"
                 >
-                  <div className="flex h-7 w-7 items-center justify-center rounded-full bg-white/20 group-hover:bg-white group-hover:text-[#F5B921] transition-all duration-300 shadow-sm">
+                  <div className="flex h-7 w-7 items-center justify-center rounded-full bg-white/20 group-hover:bg-white group-hover:text-[#434343] transition-all duration-300 shadow-sm">
                     <Mail size={14} />
                   </div>
                   <span className="text-xs sm:text-sm font-medium hidden sm:inline">
-                    enquiry@nexaportsglobal.com
+                    sales@covenantpeniel.com
                   </span>
                   <span className="text-xs sm:text-sm font-medium sm:hidden">
                     Email Us
@@ -179,7 +179,7 @@ export default function Navbar() {
               <div className="flex items-center gap-2">
                 {/* Language Selector */}
                 <div
-                  className="relative flex h-7 w-7 items-center justify-center rounded-full bg-white/20 hover:bg-white hover:text-[#AFCA21] hover:scale-110 transition-all duration-300 shadow-sm overflow-hidden cursor-pointer"
+                  className="relative flex h-7 w-7 items-center justify-center rounded-full bg-white/20 hover:bg-white hover:text-[#FF2801] hover:scale-110 transition-all duration-300 shadow-sm overflow-hidden cursor-pointer"
                   title="Choose Language"
                 >
                   <SiGoogletranslate color="black" size={14} />
@@ -194,7 +194,7 @@ export default function Navbar() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Visit our Facebook page"
-                  className="flex h-7 w-7 items-center justify-center rounded-full bg-white/20 hover:bg-white hover:text-[#AFCA21] hover:scale-110 transition-all duration-300 shadow-sm"
+                  className="flex h-7 w-7 items-center justify-center rounded-full bg-white/20 hover:bg-white hover:text-[#FF2801] hover:scale-110 transition-all duration-300 shadow-sm"
                 >
                   <Facebook size={14} />
                 </a>
@@ -204,7 +204,7 @@ export default function Navbar() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Visit our YouTube channel"
-                  className="flex h-7 w-7 items-center justify-center rounded-full bg-white/20 hover:bg-white hover:text-[#AFCA21] hover:scale-110 transition-all duration-300 shadow-sm"
+                  className="flex h-7 w-7 items-center justify-center rounded-full bg-white/20 hover:bg-white hover:text-[#FF2801] hover:scale-110 transition-all duration-300 shadow-sm"
                 >
                   <Youtube size={14} />
                 </a> */}
@@ -214,7 +214,7 @@ export default function Navbar() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Visit our Instagram page"
-                  className="flex h-7 w-7 items-center justify-center rounded-full bg-white/20 hover:bg-white hover:text-[#AFCA21] hover:scale-110 transition-all duration-300 shadow-sm"
+                  className="flex h-7 w-7 items-center justify-center rounded-full bg-white/20 hover:bg-white hover:text-[#FF2801] hover:scale-110 transition-all duration-300 shadow-sm"
                 >
                   <Instagram size={14} />
                 </a>
@@ -224,7 +224,7 @@ export default function Navbar() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Visit our LinkedIn page"
-                  className="flex h-7 w-7 items-center justify-center rounded-full bg-white/20 hover:bg-white hover:text-[#AFCA21] hover:scale-110 transition-all duration-300 shadow-sm"
+                  className="flex h-7 w-7 items-center justify-center rounded-full bg-white/20 hover:bg-white hover:text-[#FF2801] hover:scale-110 transition-all duration-300 shadow-sm"
                 >
                   <Linkedin size={14} />
                 </a>
@@ -238,25 +238,30 @@ export default function Navbar() {
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="flex h-20 items-center justify-between">
               <Link to="/" className="flex items-center gap-3">
-                <img src={Logo} alt="Nexaports Global" className="h-14 w-auto" />
+                <img
+                  src={Logo}
+                  alt="Covenant Peniel Exim"
+                  className="h-16 w-auto object-contain"
+                  style={{ imageRendering: "auto" }}
+                />
               </Link>
 
               <div className="hidden items-center gap-8 md:flex">
                 <Link
                   to="/"
-                  className="text-sm font-semibold text-slate-700 hover:text-green-700 transition"
+                  className="text-sm font-semibold text-slate-700 hover:text-red-700 transition"
                 >
                   Home
                 </Link>
                 <Link
                   to="/about"
-                  className="text-sm font-semibold text-slate-700 hover:text-green-700 transition"
+                  className="text-sm font-semibold text-slate-700 hover:text-red-700 transition"
                 >
                   About Us
                 </Link>
                 <div className="relative group">
                   <button
-                    className="flex items-center gap-1 text-sm font-semibold text-slate-700 hover:text-green-700 transition"
+                    className="flex items-center gap-1 text-sm font-semibold text-slate-700 hover:text-red-700 transition"
                     type="button"
                     onClick={() =>
                       setIsDesktopProductsOpen(!isDesktopProductsOpen)
@@ -278,7 +283,7 @@ export default function Navbar() {
                   >
                     <Link
                       to="/products"
-                      className="block rounded-lg px-3 py-2 text-sm font-semibold text-slate-700 hover:bg-green-50 hover:text-green-700 transition"
+                      className="block rounded-lg px-3 py-2 text-sm font-semibold text-slate-700 hover:bg-red-50 hover:text-red-700 transition"
                       onClick={() => setIsDesktopProductsOpen(false)}
                     >
                       All Products
@@ -289,7 +294,7 @@ export default function Navbar() {
                         <Link
                           key={slug}
                           to={`/products/${slug}`}
-                          className="block rounded-lg px-3 py-2 text-sm text-slate-700 hover:bg-green-50 hover:text-green-700 transition"
+                          className="block rounded-lg px-3 py-2 text-sm text-slate-700 hover:bg-red-50 hover:text-red-700 transition"
                           onClick={() => setIsDesktopProductsOpen(false)}
                         >
                           {item}
@@ -301,20 +306,20 @@ export default function Navbar() {
 
                 <Link
                   to="/certificates"
-                  className="text-sm font-semibold text-slate-700 hover:text-green-700 transition"
+                  className="text-sm font-semibold text-slate-700 hover:text-red-700 transition"
                 >
                   Certificates
                 </Link>
 
                 <Link
                   to="/blogs"
-                  className="text-sm font-semibold text-slate-700 hover:text-green-700 transition"
+                  className="text-sm font-semibold text-slate-700 hover:text-red-700 transition"
                 >
                   Blog
                 </Link>
                 <Link
                   to="/contact"
-                  className="text-sm font-semibold text-slate-700 hover:text-green-700 transition"
+                  className="text-sm font-semibold text-slate-700 hover:text-red-700 transition"
                 >
                   Contact
                 </Link>
@@ -409,7 +414,7 @@ export default function Navbar() {
 
               <Link
                 to="/contact"
-                className="mt-2 block rounded-md bg-green-600 px-3 py-2 text-center text-base font-semibold text-white hover:bg-green-700 transition"
+                className="mt-2 block rounded-md bg-red-600 px-3 py-2 text-center text-base font-semibold text-white hover:bg-red-700 transition"
                 onClick={closeMenu}
               >
                 Get Quote

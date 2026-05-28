@@ -596,7 +596,7 @@ export const getWelcomeVideoData = async () => {
     if (result.status && result.data) {
       const data = result.data;
       return {
-        heading: data.heading || "Welcome To Oceanmark Exim",
+        heading: data.heading || "Welcome To Covenant Peniel Exim",
         links: data.links || [],
       };
     }

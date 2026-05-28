@@ -15,7 +15,7 @@ function Home() {
     <div>
       <SEO
         title="Home"
-        description="oceanmarkexim - Your trusted partner for premium quality Indian spices, grains, and food exports."
+        description="Covenant Peniel Exim - Your trusted partner for premium quality Indian spices, grains, and food exports."
       />
       <HeroSection />
       <ProductMarquee />

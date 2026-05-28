@@ -9,30 +9,30 @@ import {
 
 const TopFooter = () => {
   return (
-    <div className="w-full bg-linear-to-r from-[#AFCA21] via-[#7ec31f] to-[#F5B921] text-white">
+    <div className="w-full bg-linear-to-r from-[#AFCA21] via-[#7ec31f] to-[#434343] text-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-4">
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           {/* Contact Information - Left Side */}
           <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6">
             <a
-              href="tel:+919156935665"
+              href="tel:+918885111263"
               className="flex items-center gap-2 hover:text-gray-100 transition-all duration-300 group"
             >
-              <div className="flex h-9 w-9 items-center justify-center rounded-full bg-white/20 group-hover:bg-white group-hover:text-[#F5B921] transition-all duration-300 shadow-md">
+              <div className="flex h-9 w-9 items-center justify-center rounded-full bg-white/20 group-hover:bg-white group-hover:text-[#434343] transition-all duration-300 shadow-md">
                 <Phone size={16} />
               </div>
-              <span className="text-sm font-medium">+91 9156935665</span>
+              <span className="text-sm font-medium">+91 8885 111 263</span>
             </a>
 
             <a
-              href="mailto:enquiry@nexaportsglobal.com"
+              href="mailto:sales@covenantpeniel.com"
               className="flex items-center gap-2 hover:text-gray-100 transition-all duration-300 group"
             >
-              <div className="flex h-9 w-9 items-center justify-center rounded-full bg-white/20 group-hover:bg-white group-hover:text-[#F5B921] transition-all duration-300 shadow-md">
+              <div className="flex h-9 w-9 items-center justify-center rounded-full bg-white/20 group-hover:bg-white group-hover:text-[#434343] transition-all duration-300 shadow-md">
                 <Mail size={16} />
               </div>
               <span className="text-sm font-medium hidden sm:inline">
-                enquiry@nexaportsglobal.com
+                sales@covenantpeniel.com
               </span>
               <span className="text-sm font-medium sm:hidden">Email Us</span>
             </a>

@@ -52,7 +52,7 @@ function CategoryTile({ to, name, image, priority = false }) {
       resolvedImage={resolvedImage}
       priority={priority}
     >
-      <div className="mt-2 ml-2 inline-flex items-center text-sm font-semibold text-[#5e7a17]">
+      <div className="mt-2 ml-2 inline-flex items-center text-sm font-semibold text-[#434343]">
         View Categories
         <span className="ml-2 transition-transform group-hover:translate-x-1">
           →
@@ -109,8 +109,8 @@ export function ProductsIndex() {
 
       <div className="relative max-w-7xl mx-auto px-4 md:px-8 py-12 md:py-16">
         <div className="absolute inset-0 -z-10 overflow-hidden pointer-events-none">
-          <div className="absolute -top-10 -left-10 w-80 h-80 bg-[#C6D869] rounded-full blur-3xl opacity-15" />
-          <div className="absolute -bottom-12 -right-12 w-96 h-96 bg-[#F5B921] rounded-full blur-3xl opacity-12" />
+          <div className="absolute -top-10 -left-10 w-80 h-80 bg-[#FF2801] rounded-full blur-3xl opacity-15" />
+          <div className="absolute -bottom-12 -right-12 w-96 h-96 bg-[#434343] rounded-full blur-3xl opacity-12" />
         </div>
 
         <motion.div
@@ -120,12 +120,12 @@ export function ProductsIndex() {
           transition={{ duration: 0.6 }}
           className="text-center mb-10 md:mb-14"
         >
-          <span className="inline-flex items-center gap-2 rounded-full bg-[#C6D869]/25 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-[#5e7a17]">
-            <span className="h-1.5 w-1.5 rounded-full bg-[#7a9a1f]" />
+          <span className="inline-flex items-center gap-2 rounded-full bg-[#FF2801]/25 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-[#434343]">
+            <span className="h-1.5 w-1.5 rounded-full bg-[#FF2801]" />
             Our Catalogue
           </span>
           <h2 className="mt-4 text-2xl md:text-3xl font-bold text-slate-900">Explore Product Categories</h2>
-          <div className="mt-3 h-1 w-24 mx-auto rounded-full bg-linear-to-r from-[#C6D869] to-[#F5B921]" />
+          <div className="mt-3 h-1 w-24 mx-auto rounded-full bg-linear-to-r from-[#FF2801] to-[#434343]" />
         </motion.div>
 
         <motion.div
@@ -192,7 +192,7 @@ export function ProductsCategory() {
         <div className="max-w-7xl mx-auto px-4 md:px-8 py-12">
           <Link
             to="/products"
-            className="inline-flex items-center rounded-full bg-[#006837] px-6 py-3 text-white font-semibold hover:bg-[#005028] transition"
+            className="inline-flex items-center rounded-full bg-[#434343] px-6 py-3 text-white font-semibold hover:bg-[#2a2a2a] transition"
           >
             Back to Products
           </Link>
@@ -222,7 +222,7 @@ export function ProductsCategory() {
         ]}
         // Using a default bg if none provided (API didn't seem to have bg image)
         backgroundImage={categoryData.heroBackgroundImage || ProductsImg}
-        backgroundColor="from-green-600 to-emerald-700"
+        backgroundColor="from-red-600 to-emerald-700"
       ></PageHero>
 
       <div className="max-w-7xl mx-auto px-4 md:px-8 pt-10 md:pt-12">
@@ -231,14 +231,14 @@ export function ProductsCategory() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          className="relative rounded-3xl border border-[#C6D869]/40 bg-white p-6 md:p-10 shadow-sm overflow-hidden"
+          className="relative rounded-3xl border border-[#FF2801]/40 bg-white p-6 md:p-10 shadow-sm overflow-hidden"
         >
-          <div className="absolute left-0 top-0 h-1.5 w-32 rounded-tl-3xl bg-linear-to-r from-[#C6D869] to-[#F5B921]" />
+          <div className="absolute left-0 top-0 h-1.5 w-32 rounded-tl-3xl bg-linear-to-r from-[#FF2801] to-[#434343]" />
           <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-4">
             {introTitle}
           </h2>
           <div
-            className="text-slate-600 leading-relaxed prose prose-emerald max-w-none"
+            className="text-slate-600 leading-relaxed prose prose-red max-w-none"
             dangerouslySetInnerHTML={{ __html: descriptionHtml }}
           />
         </motion.div>
@@ -246,8 +246,8 @@ export function ProductsCategory() {
 
       <div className="relative max-w-7xl mx-auto px-4 md:px-8 py-12 md:py-16">
         <div className="absolute inset-0 -z-10 overflow-hidden pointer-events-none">
-          <div className="absolute top-10 right-10 w-80 h-80 bg-[#C6D869] rounded-full blur-3xl opacity-12" />
-          <div className="absolute bottom-10 left-10 w-80 h-80 bg-[#F5B921] rounded-full blur-3xl opacity-10" />
+          <div className="absolute top-10 right-10 w-80 h-80 bg-[#FF2801] rounded-full blur-3xl opacity-12" />
+          <div className="absolute bottom-10 left-10 w-80 h-80 bg-[#434343] rounded-full blur-3xl opacity-10" />
         </div>
         {products.length > 0 ? (
           <motion.div
